@@ -1,0 +1,80 @@
+INFORMAÇÕES IMPORTANTES:
+
+- 00038624
+- 89dtr@ku3H
+- 143.54.17.35 - root - m@rgl#gi32G
+
+TODO LIST:
+
+-> Gmail não esta recebendo emails do sistema (formiga vai ver com cpd)
+-> Atualizar documentos (falta documento politicas)
+
+
+1) acesso para estrangeiro
+---
+Acho que a melhor saída para isso seria um checkbox para a criatura marcar na hora do cadastro, ai o campo CPF não faz a verificação para passar a aceitar o número do passaporte. No checkbox seria algo do tipo "Estrangeiro sem CPF?"
+
+2) nome de alunos não aparecem para professore responsável
+---
+O Professor Ita relatou que mesmo os alunos que fizeram o cadastro não aparecem para ele. Na insterfasse administrativa aparece todos os alunos, mesmo os não ativos. Acho que o melhor seria mostrar todos os alunos com flag de ativos e não ativos.
+
+3) usuários sem CPF
+---
+Quando os usuários foram importados, alguns não possuíam CPF. Com isso tem usuários com. Teria como excluir estes usuários sem CPF? O problema quem tem, até agora dois usuário professor, Diego e Rogério Margis, com alunos vinculados.
+
+4) senha
+---
+Teria como ter um campo de confirmação para a senha?
+Teria como fazer um teste para ver se a senha contem mínimo de 8 caracteres, ao menos uma letra maiúscula e uma minúscula, numero e caracter especial (!@#$%&*) sem os parênteses?
+Teria como VER esta senha não em hash e sim como foi digitada? (este pode ser por ultimo)
+
+5) item pendente
+---
+Na pendência, teria como aparecer o nome do usuário que gerou a pendência?
+
+6) visitante
+---
+Mesmo o usuário visitante tem que ter um responsável/orientador. No modulo administrativo não da pra alterar.
+
+7) Export de email de todos ativos
+
+
+8) Arrumar pendencias geradas por alteração de dispositivos
+
+9) Todo mundo no grupo cbiot-l por default (tentar adicionar pessoas ativas no grupo)
+
+7) lista de ip
+---
+Muito complicado fazer um teste para saber se o ip já foi cadastrado ou não?
+Mesma coisa para o mac?
+Isso pode ser por ultimo tb.
+
+----------------------------------------------------------------------------------------------
+# USUARIOS:
+
+Ações: Novo, Removido, Expiração, Reativação
+Recursos: Email (LDAP), Portas, ... ?
+
+# DISPOSITIVOS:
+
+Ações: Novo, Removido
+Recursos: PfSense (DHCP)
+
+Ação:	Novo Usuário
+Opções: Remover - Aceitar
+
+Ação:	Removido Usuário
+Opções: Marcar como lido
+
+Ação:	Expiração Usuário
+Opções: Não Renovar (descadastra dispositivos automaticamente no dia da expiração) - Renovar Período de Ativação
+
+Ação:	Reativação Usuário
+Opções: Marcar como lido (ignorar) - Reativar Usuário
+
+Ação:	Novo Dispositivo
+Opções: Marcar como lido
+
+Ação:	Removido Dispositivo
+Opções: Marcar como lido
+

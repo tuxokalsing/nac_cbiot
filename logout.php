@@ -1,0 +1,14 @@
+<?php
+/*
+*	Universidade Federal do Rio Grande do Sul - Centro de Biotecnologia
+*
+*	Desenvolvedores: Arthur Kalsing
+*	Descrição: Verificação de informações de login, utilizada após login.
+*
+*/
+
+session_start();
+session_destroy();
+header("Location: login.php");
+//header("Location: http://www.cbiot.ufrgs.br");
+?>
